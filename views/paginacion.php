@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
     <title>Paginación - MVC</title>
 </head>
 <body>
@@ -22,10 +23,10 @@
     <section class="paginacion">
         <ul>
             <?php if($pageId == 1):?>
-                <li class="desactivado">«</li>
+                <li class="desactivado">&larr;</li>
             <?php else:?>
                 <li>
-                    <a href="?paginas=<?= $pageId - 1;?>">«</a>
+                    <a href="?paginas=<?= $pageId - 1;?>">&larr;</a>
                 </li>
             <?php endif;?>
 
@@ -44,10 +45,10 @@
 
             <!-- Forward button -->
             <?php if($pageId == $pageNumber):?>
-                <li class="desactivado">»</li>
+                <li class="desactivado">&rarr;</li>
             <?php else:?>
                 <li>
-                    <a href="?paginas=<?= $pageId + 1;?>">»</a>
+                    <a href="?paginas=<?= $pageId + 1;?>">&rarr;</a>
                 </li>
             <?php endif;?>
         </ul>

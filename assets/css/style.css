@@ -2,10 +2,10 @@
     --color1:#ffffff;
     --color2:#000000;
     --color3:#f5f6f7;
-    --color4:#345666;
+    --color4:#05628d;
     --color5:#2a3d54;
-    --color6: #e97f02;
-    --color7:#7a9baa;
+    --color6:#e97f02;
+    --color7:#b9b9b9;
 }
 *{
     margin:0px;
@@ -75,7 +75,19 @@ body{
 .contenedor .paginacion ul li{
     flex: 1 0 auto;
     margin: 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .125rem;
+    box-shadow: 0px 0px 2px 1.125px #8d8d8db7;
+    transition: all 300ms ease-in;
 }
+
+.paginacion ul li:hover{
+    background-color: var(--color4);
+    transition: all 300ms ease-in-out; 
+}
+
 .paginacion ul .desactivado{
     background-color: var(--color7);
     font-family: "Quicksand", sans-serif;
@@ -85,7 +97,6 @@ body{
 .paginacion ul .activado{
     background-color:var(--color6);
 }
-
 
  .paginacion ul li{
     background-color: var(--color5);
@@ -99,11 +110,6 @@ body{
     display: block;
     color: var(--color1);
     text-decoration: none;
-}
-
-.paginacion ul li:hover{
-    background-color: var(--color4);
-    
 }
 
 .contenedor .paginacion ul li img{

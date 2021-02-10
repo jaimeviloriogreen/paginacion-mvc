@@ -8,7 +8,7 @@ class MainController{
     public function Index(){
         $paginacion = new MainModel();
 
-        $pageId = isset($_GET['paginas']) && !empty((int)($_GET['paginas'])) ? (int)$_GET['paginas'] : 1;
+        $pageId = isset($_GET['paginas']) && !empty((int)($_GET['paginas'])) ? $_GET['paginas'] : 1;
         $postByPage = 5;
         $start = $pageId > 1 ? ($pageId * $postByPage) - $postByPage : 0;
 

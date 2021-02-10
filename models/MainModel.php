@@ -24,10 +24,10 @@ class MainModel{
                     array_push($this->paginacion, $row);   
                 }
                 return $this->paginacion;
-                
+
                 $stm->close();
             }else{
-                return NULL;
+                return $this->paginacion;
             }
 
         }
