@@ -22,10 +22,10 @@ body{
 .contenedor{
     width: 90%; 
     max-width: 50rem;
-    margin: 3.125rem auto;
+    margin: 5.125rem auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px minmax(23rem, auto) 100px;
     grid-template-areas: "a a"
                          "b b"
                          "c c" ;
@@ -45,8 +45,14 @@ body{
     font-family: "Quicksand", sans-serif;
     font-weight: 100;
     font-size: 1.125rem;
-    padding: 15px;
-    
+    padding: 15px;   
+}
+
+.notfound{
+    grid-area: b;
+    padding: 15px;   
+    justify-self: center;
+    align-self: center;
 }
 
 .contenedor .articulos ul{

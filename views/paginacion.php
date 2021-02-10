@@ -10,15 +10,22 @@
 </head>
 <body>
 <main class="contenedor">
-	<h2>Paginación</h2>
-    <!-- Articles -->
-	<section class="articulos">
-		<ul>
-            <?php foreach($data as $art):?>
-                <li><?= $art['id'] . ' - ' . $art['articulos'];?></li>
-            <?php endforeach;?>
-        </ul>	
-	</section>
+    <?php if(!empty($data)):?>
+	    <h2>Paginación</h2>
+        <!-- Articles -->
+        <section class="articulos">
+            <ul>
+                <?php foreach($data as $art):?>
+                    <li><?= $art['id'] . ' - ' . $art['articulos'];?></li>
+                <?php endforeach;?>
+            </ul>
+        </section>
+    <?php else:?>
+        <section class="notfound">
+            <h2>Nothing found!</h2>
+        </section>
+    <?php endif;?>
+
          <!-- Backward button --> 
     <section class="paginacion">
         <ul>
