@@ -10,15 +10,15 @@
 <body>
 <main class="contenedor">
 	<h2>Paginación</h2>
+    <!-- Articles -->
 	<section class="articulos">
-         <!-- Backward button --> 
 		<ul>
             <?php foreach($data as $art):?>
                 <li><?= $art['id'] . ' - ' . $art['articulos'];?></li>
             <?php endforeach;?>
         </ul>	
 	</section>
-    <!-- Pages Number -->
+         <!-- Backward button --> 
     <section class="paginacion">
         <ul>
             <?php if($pageId == 1):?>
@@ -29,6 +29,7 @@
                 </li>
             <?php endif;?>
 
+    <!-- Pages Number -->
             <?php for($i = 1; $i <= $pageNumber; $i++):?>
                 <?php if($pageId == $i):?>
                     <li class="activado">
