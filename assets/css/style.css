@@ -1,0 +1,129 @@
+:root{
+    --color1:#ffffff;
+    --color2:#000000;
+    --color3:#f5f6f7;
+    --color4:#345666;
+    --color5:#2a3d54;
+    --color6: #e97f02;
+    --color7:#7a9baa;
+}
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+body{
+    background-color: var(--color3);
+}
+
+.contenedor{
+    width: 90%; 
+    max-width: 50rem;
+    margin: 3.125rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: "a a"
+                         "b b"
+                         "c c" ;
+}
+
+.contenedor h2{
+    grid-area: a;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    justify-self: center;
+    align-self: center;
+}
+
+.contenedor .articulos{
+    grid-area: b;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 100;
+    font-size: 1.125rem;
+    padding: 15px;
+    
+}
+
+.contenedor .articulos ul{
+    list-style: none;
+}
+
+.contenedor .articulos li{
+    border-bottom: 2px solid var(--color1);
+    margin-bottom: 1.25rem;
+    padding-bottom: 5px;
+    line-height: 1.75;
+}
+
+.contenedor .paginacion{
+    grid-area: c;
+    width: 60%;
+    justify-self: center;
+    align-self: center;
+}
+
+.contenedor .paginacion ul{
+    list-style: none;
+    display: flex;
+}
+
+.contenedor .paginacion ul li{
+    flex: 1 0 auto;
+    margin: 0px 5px;
+}
+.paginacion ul .desactivado{
+    background-color: var(--color7);
+    font-family: "Quicksand", sans-serif;
+    cursor: not-allowed;
+}
+
+.paginacion ul .activado{
+    background-color:var(--color6);
+}
+
+
+ .paginacion ul li{
+    background-color: var(--color5);
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.125rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.paginacion ul li a{
+    display: block;
+    color: var(--color1);
+    text-decoration: none;
+}
+
+.paginacion ul li:hover{
+    background-color: var(--color4);
+    
+}
+
+.contenedor .paginacion ul li img{
+    width: 0.9375rem;
+}
+
+@media screen and (max-width:780px){
+    html{
+        font-size: 14px;
+    }
+    .contenedor .paginacion{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:480px){
+    html{
+        font-size: 12px;
+    }
+    .contenedor .paginacion{
+        width: 100%;
+    }
+}
