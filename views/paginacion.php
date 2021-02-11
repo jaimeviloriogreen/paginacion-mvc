@@ -32,7 +32,7 @@
             <?php if($pageId == 1):?>
                 <li class="desactivado">&larr;</li>
             <?php else:?>
-                <li>
+                <li class="pageNumber">
                     <a href="?paginas=<?= $pageId - 1;?>">&larr;</a>
                 </li>
             <?php endif;?>
@@ -40,11 +40,11 @@
     <!-- Pages Number -->
             <?php for($i = 1; $i <= $pageNumber; $i++):?>
                 <?php if($pageId == $i):?>
-                    <li class="activado">
+                    <li class="activado pageNumber">
                         <a href="?paginas=<?=$i;?>"><?= $i?></a>
                     </li>
                 <?php else:?>
-                    <li>
+                    <li class="pageNumber">
                         <a href="?paginas=<?=$i;?>"><?= $i?></a>
                     </li>
                 <?php endif;?>
@@ -54,7 +54,7 @@
             <?php if($pageId == $pageNumber):?>
                 <li class="desactivado">&rarr;</li>
             <?php else:?>
-                <li>
+                <li class="pageNumber">
                     <a href="?paginas=<?= $pageId + 1;?>">&rarr;</a>
                 </li>
             <?php endif;?>
@@ -62,5 +62,7 @@
     </section>
 </main>
     
+<!-- JavaScript -->
+<script src="/assets/js/app.js"></script>
 </body>
 </html>

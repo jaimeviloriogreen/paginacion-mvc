@@ -100,6 +100,10 @@ body{
     cursor: not-allowed;
 }
 
+.cursorPoint{
+    cursor: pointer;
+}
+
 .paginacion ul .activado{
     background-color:var(--color6);
 }
@@ -122,6 +126,7 @@ body{
     width: 0.9375rem;
 }
 
+
 @media screen and (max-width:780px){
     html{
         font-size: 14px;
@@ -130,7 +135,6 @@ body{
         width: 75%;
     }
 }
-
 @media screen and (max-width:480px){
     html{
         font-size: 12px;
