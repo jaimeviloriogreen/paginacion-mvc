@@ -10,7 +10,9 @@
 </head>
 <body>
 <main class="contenedor">
+<!-- Validate if array($data) is not empty -->
     <?php if(!empty($data)):?>
+
 	    <h2>Paginación</h2>
         <!-- Articles -->
         <section class="articulos">
@@ -20,13 +22,17 @@
                 <?php endforeach;?>
             </ul>
         </section>
+        
+<!-- Else show nothing -->
     <?php else:?>
         <section class="notfound">
             <h2>Nothing found!</h2>
         </section>
     <?php endif;?>
 
+<!-- Validate if array($data) is not empty -->
     <?php if(!empty($data)):?>
+    
          <!-- Backward button --> 
     <section class="paginacion">
         <ul>
