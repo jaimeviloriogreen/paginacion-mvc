@@ -26,6 +26,7 @@
         </section>
     <?php endif;?>
 
+    <?php if(!empty($data)):?>
          <!-- Backward button --> 
     <section class="paginacion">
         <ul>
@@ -58,6 +59,7 @@
                     <a href="?paginas=<?= $pageId + 1;?>">&rarr;</a>
                 </li>
             <?php endif;?>
+    <?php endif;?>
         </ul>
     </section>
 </main>
